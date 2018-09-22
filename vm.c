@@ -76,24 +76,31 @@ void execute(cpu_t* cpu) {
 		case 4:
 			// mov3
 			cpu->reg3 = cpu->imm;
+			break;
 		case 5:
 			// load
 			cpu->memory[cpu->imm] = cpu->reg1;
+			break;
 		case 6:
 			// store
 			cpu->reg1 = cpu->memory[cpu->imm];
+			break;
 		case 7:
 			// mov12
 			cpu->reg1 = cpu->reg2;
+			 break;
 		case 8:
 			// mov13
 			cpu->reg1 = cpu->reg3;
+			break;
 		case 9:
 			// mov21
 			cpu->reg2 = cpu->reg1;
+			break;
 		case 10:
 			// mov31
 			cpu->reg3 = cpu->reg1;
+			break;
 	}
 }
 
